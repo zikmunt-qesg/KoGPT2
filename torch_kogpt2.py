@@ -22,9 +22,9 @@ while i<40:
     #toked = tok(sent)
     #i += 1
     output_sequences = model.generate(input_ids=input_ids,
-    max_length = 200,
-    temperature = 1.0,
-    repetition_penalty=1.0,
+    max_length = 400,
+    temperature = 0.7,
+    repetition_penalty=1.5,
     do_sample=True)
     if len(output_sequences.shape) > 2:
         output_sequences.squeeze_()
